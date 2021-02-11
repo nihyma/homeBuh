@@ -110,6 +110,10 @@ ENV/
 env.bak/
 venv.bak/
 
+config/
+homebuh.service
+Test/
+
 # Spyder project settings
 .spyderproject
 .spyproject
