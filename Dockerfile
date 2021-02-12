@@ -10,6 +10,5 @@ RUN wget -O - --no-check-certificate https://github.com/nihyma/homeBuh/archive/m
 RUN mv homeBuh-main homeBuh
 WORKDIR /homeBuh
 RUN pip install -r requirements.txt
-WORKDIR /homeBuh/app
 VOLUME /config
-CMD ["python", "app.py -c /config/config.yml"]
+CMD ["python", "/homeBuh/app/app.py -c /config/config.yml"]
