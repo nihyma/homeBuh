@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM arm32v7/alpine:latest
 ARG BUILD_REPO=nihyma/homeBuh
 ARG BUILD_BRANCH=main
 
