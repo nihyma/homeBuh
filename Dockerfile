@@ -11,4 +11,5 @@ RUN mv homeBuh-main homeBuh
 WORKDIR /homeBuh
 RUN pip install -r requirements.txt
 VOLUME /config
-CMD ["python", "/homeBuh/app/app.py -c /config/config.yml"]
+WORKDIR /homeBuh/app
+CMD python3 main.py -c /config/config.yml
