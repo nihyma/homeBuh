@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.8-slim
 ARG BUILD_REPO=nihyma/homeBuh
 ARG BUILD_BRANCH=main
 
