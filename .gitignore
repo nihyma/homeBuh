@@ -114,6 +114,7 @@ venv.bak/
 config/
 homebuh.service
 Test/
+config.yml
 
 # Spyder project settings
 .spyderproject
