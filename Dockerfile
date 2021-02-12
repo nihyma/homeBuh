@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y wget
 RUN wget -O - --no-check-certificate https://github.com/nihyma/homeBuh/archive/main.tar.gz | tar -xz
 RUN mv homeBuh-main homeBuh
 WORKDIR /homeBuh
+ADD requirements.txt /homeBuh
 RUN pip install -r requirements.txt
 VOLUME /config
 WORKDIR /homeBuh/app

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from bot import telegram
+from bot import telebot
 from nalog import api
 import yaml
 import argparse
@@ -29,8 +29,8 @@ def main() -> None:
     namespace = arg_parser.parse_args()
     config = init_config(namespace.config)
     api_client = api.NalogRuPython(config['nalod_api'])
-    bot = telegram.TelegramBotPython(config['telegram'], api_client)
-    bot.start()
+    bot = telebot.get_bot(config['telegram'], api_client)
+    bot.polling()
 
 if __name__ == '__main__':
     main()
