@@ -28,7 +28,10 @@ def main() -> None:
     arg_parser = create_arg_parser()
     namespace = arg_parser.parse_args()
     config = init_config(namespace.config)
-    api_client = api.NalogRuPython(config['nalod_api'])
+    try:
+        api_client = api.NalogRuPython(config['nalod_api'])
+    except:
+        api_client = None
     bot = telebot.get_bot(config['telegram'], api_client)
     bot.polling()
 
