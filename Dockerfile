@@ -8,8 +8,7 @@ LABEL Author="nihyma"
 
 RUN wget -O - --no-check-certificate https://github.com/nihyma/homeBuh/archive/main.tar.gz | tar -xz
 RUN mv homeBuh-main homeBuh
-
-ADD requirements.txt /homeBuh
+WORKDIR /homeBuh
 
 RUN apk --no-cache update \
 && apk --no-cache upgrade \
