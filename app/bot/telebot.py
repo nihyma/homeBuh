@@ -26,7 +26,7 @@ def get_bot(config, api_client):
     @bot.message_handler(func=lambda message: message.chat.id in bot.FILTER_GROUP and filter_qr(message.text))
     def qr_command(message) -> None:
         flag = None
-        if self.CLIENT:
+        if bot.CLIENT:
             flag, ticket = bot.CLIENT.get_clean_json(message.text)
         if flag:
             bot.send_message(bot.CHANNEL_ID, ticket)
