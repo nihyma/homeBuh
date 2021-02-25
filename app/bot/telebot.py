@@ -33,7 +33,7 @@ def get_bot(config, api_client):
         else:
             pars_qr = dict(x.split('=') for x in message.text.split('&'))
             date_qr = pars_qr['t'][:8]
-            sum_qr = pars_qr['s']
+            sum_qr = pars_qr['s'].replace('.','')
             msg = bot.DEFAULT_MSG.format(sum_qr, date_qr, bot.CLIENT.INN)
             bot.send_message(bot.CHANNEL_ID, msg)
 
