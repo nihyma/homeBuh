@@ -19,8 +19,8 @@ def create_arg_parser():
     parser.add_argument('-c', '--config', type=argparse.FileType(), required=True, help='Path to config file')
     return parser
 
-def init_config(config_path: str):
-    yaml_data = config_path.read()
+def init_config(config_file):
+    yaml_data = config_file.read()
     data_loaded = yaml.safe_load(yaml_data)
     return data_loaded
 

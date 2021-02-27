@@ -36,5 +36,4 @@ def get_bot(config, api_client):
             sum_qr = pars_qr['s'].replace('.','')
             msg = bot.DEFAULT_MSG.format(sum_qr, date_qr, bot.CLIENT.INN)
             bot.send_message(bot.CHANNEL_ID, msg)
-
     return bot
